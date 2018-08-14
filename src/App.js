@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { fetchBusLocations } from './actions';
 import { connect } from 'react-redux';
-import { Card, Icon, Button, Segment, TransitionablePortal, Dropdown } from 'semantic-ui-react';
+import { Card, Icon, Button, Segment, TransitionablePortal, Dropdown, Divider } from 'semantic-ui-react';
 import ReactMapGL, { Marker, Popup, NavigationControl, FlyToInterpolator, LinearInterpolator } from 'react-map-gl';
 import ReactLoading from 'react-loading';
 import styled from 'styled-components';
@@ -152,6 +152,7 @@ class App extends Component {
               </FilterContainer> */}
               <Segment style={{ right: '20px', position: 'absolute', top: '50px', zIndex: 1000 }}>
                 <Dropdown placeholder='Select Route Number' fluid search selection options={[]} />
+                <Divider hidden />
                 <Dropdown placeholder='Select Stop Number' fluid search selection options={[]} />
               </Segment>
             </TransitionablePortal>
