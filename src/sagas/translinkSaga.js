@@ -8,6 +8,8 @@ function* fetchBusLocations() {
   const req = request.get(' https://cors-anywhere.herokuapp.com/http://api.translink.ca/rttiapi/v1/buses')
          .query({ apikey })
          .set('Accept', 'application/json');
+
+  
   
   let busLocationsResponse = yield req;
   let busLocations = JSON.parse(busLocationsResponse.text);
