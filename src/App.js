@@ -6,10 +6,18 @@ import ReactLoading from 'react-loading';
 import './App.css';
 
 const BusInfo = ({ busInfo }) => (
-  <div>
+  <div style={{ 
+      borderRadius : 8, 
+      backgroundColor : "white", 
+      borderWidth: 0.5,
+      height : 50,
+      display: 'flex',
+      flex : 1,
+      justifyContent : 'center',
+      alignItems : 'center'
+    }}>
     <div>
-      {`Vehicle No: ${busInfo.VehicleNo}\n
-        Destination: ${busInfo.Destination}
+      {`Vehicle No: ${busInfo.VehicleNo}\nDestination: ${busInfo.Destination}
       `}
     </div>
   </div>
@@ -61,7 +69,8 @@ class App extends Component {
           {...this.state.viewport}
           //transitionDuration={1000}
           //transitionInterpolator={new LinearInterpolator()}
-          mapStyle={'mapbox://styles/nikoootine/cjklykkie1j7h2royf7304dqa'}
+          mapStyle={'mapbox://styles/mapbox/streets-v8'}
+          //mapStyle={'mapbox://styles/nikoootine/cjklykkie1j7h2royf7304dqa'}
           mapboxApiAccessToken={"pk.eyJ1Ijoibmlrb29vdGluZSIsImEiOiJjamtsdnlpZXUyNXBiM3BvM243dWM0ZWRpIn0.MKmDh_tL-VSwb9qGBdJtlQ"}
           onViewportChange={(viewport) => this.setState({ viewport })}
         >
@@ -84,6 +93,7 @@ class App extends Component {
             this.state.popupInfo &&
             <Popup tipSize={5}
               anchor="top"
+              offsetTop={-85}
               longitude={this.state.popupInfo.Longitude}
               latitude={this.state.popupInfo.Latitude}
               onClose={() => this.setState({ popupInfo: null })} >

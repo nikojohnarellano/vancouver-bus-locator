@@ -11,7 +11,6 @@ function* fetchBusLocations() {
   
   let busLocationsResponse = yield req;
   let busLocations = JSON.parse(busLocationsResponse.text);
-  console.log(busLocations)
   yield put(setBusLocations(busLocations));
 }
 
