@@ -1,5 +1,17 @@
 export const FETCH_BUS_LOCATIONS = 'FETCH_BUS_LOCATIONS';
+export const LOADING_BUSES = 'LOADING_BUSES';
 export const SET_BUS_LOCATIONS = 'SET_BUS_LOCATIONS';
 
 export const SET_FILTERS = 'SET_FILTERS';
 export const APPLY_FILTERS = 'APPLY_FILTERS';
+
+export const FETCH_STOP_NO = 'FETCH_STOP_NO';
+export const LOADING_STOP_NO = 'LOADING_STOP_NO';
+export const SET_STOP_NO = 'SET_STOP_NO';
+
+export const FETCH_ROUTE_NO = 'FETCH_ROUTE_NO';
+export const LOADING_ROUTE_NO = 'LOADING_ROUTE_NO';
+export const SET_ROUTE_NO = 'SET_ROUTE_NO';
+
+export const SET_ERROR_MESSAGE = 'SET_ERROR_MESSAGE';
+export const RESET_ERROR_MESSAGE = 'RESET_ERROR_MESSAGE';
