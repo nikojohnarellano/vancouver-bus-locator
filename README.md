@@ -1,4 +1,4 @@
-# SpareLabs Front End Challenge
+# Vancouver Bus Locator
 
 A functioning realtime bus locator. Clicking on the markers will give information about the bus' route, direction and destination. 
 
